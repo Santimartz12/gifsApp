@@ -1,0 +1,19 @@
+<nav class="header">
+
+    <div class="header__container">
+
+        <h1 class="header__titulo">GifsApp</h1>
+
+        <div class="search_container">
+
+            <input type="text" id="search" placeholder="Buscar..." class="buscador"
+            (keydown.enter)="mostrarTexto()" #inputBuscar>
+            <i class="bi bi-search icon_search_header" (click)="mostrarTexto()"></i>
+       
+        </div>
+
+        <p class="ayuda_text">Documentación</p>
+
+    </div>
+
+</nav>
