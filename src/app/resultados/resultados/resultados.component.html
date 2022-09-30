@@ -1,0 +1,14 @@
+<h1 *ngIf="titulo.length == 0 else tituloResultado" class="titulo__resultados">Lo más popular de hoy</h1>
+
+<ng-template #tituloResultado > <h1 class="titulo__resultados"> Resultados de {{titulo | titlecase}}</h1></ng-template>
+
+
+<ul class="resultados__container">
+    <li class="resultados__item" *ngFor="let resultado of resultados">
+        <img src="{{ resultado.images.downsized_medium.url }}" alt="{{resultado.title}}" class="resultado__img">
+        <p class="resultado__text">{{resultado.title}}</p>
+    </li>
+</ul>
+
+
+

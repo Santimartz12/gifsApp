@@ -9,9 +9,13 @@ import { BusquedaService } from 'src/app/servicios/busqueda.service';
 export class SidebarComponent {
 
   get busquedas(){
-    return this.busqueda.mostrarResultados;
+    return this.busqueda.mostrarBusquedas;
   }
 
   constructor(private busqueda: BusquedaService){}
+
+  buscar( query: string){
+    this.busqueda.buscar(query);
+  }
 
 }

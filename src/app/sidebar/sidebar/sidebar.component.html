@@ -1,5 +1,8 @@
 <aside class="sidebar">
+
+    <h2 class="ultimas__busquedas" *ngIf="busquedas.length >= 1">Busquedas recientes:</h2>
+
     <ul class="busquedas__container">
-        <li class="busqueda__item" *ngFor="let busqueda of busquedas">{{ busqueda | titlecase }}</li>
+        <li class="busqueda__item" *ngFor="let busqueda of busquedas" (click)="buscar( busqueda )">{{ busqueda | titlecase }}</li>
     </ul>
 </aside>
