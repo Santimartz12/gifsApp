@@ -1,27 +1,9 @@
 # GifsApp
+Proyecto realizado con Angular V14
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+## Descripción
+Busca todos los gifs que quieras mediante la barra de busqueda superior. Con el icono de lupa o incluso presionando la tecla Enter, la página te traerá los 15 primeros resultados de la API Giphy. 
 
-## Development server
+En la barra lateral izquierda tienes tus 10 busquedas recientes, puedes revisarlas y desplazarte entre ellas para encontrar tus resultados. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La aplicacion web trabaja con el local Storage, por lo que podrás mantener tu historial para futuras busquedas.
