@@ -8,6 +8,8 @@ import { BusquedaService } from 'src/app/servicios/busqueda.service';
 })
 export class HeaderComponent {
 
+  documentacion: boolean = false;
+
   @ViewChild('inputBuscar') entradaInput!: ElementRef<HTMLInputElement>;
 
   constructor(private busqueda: BusquedaService) { }
@@ -23,6 +25,14 @@ export class HeaderComponent {
     //Se limpia el buscador
     this.entradaInput.nativeElement.value = "";
 
+  }
+
+  mostrarDocumentacion(){
+    this.documentacion = true;
+  }
+
+  ocultarDocumentacion(){
+    this.documentacion = false;
   }
 
 }
