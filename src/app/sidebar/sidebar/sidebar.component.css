@@ -11,6 +11,18 @@
     justify-content: flex-start;
 }
 
+.btn__show{
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 80px;
+    top: -26px;
+    border: none;
+    background-color: var(--color_sidebar);
+    color: var(--color_fuente_header);
+    display: none;
+}
+
 .busquedas__container{
     width: 80%;
     display: flex;
@@ -70,6 +82,32 @@
 
     .visible{
         display: block;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+
+    .btn__show{
+        display: block;
+    }
+
+    .sidebar{
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        width: 100%;
+        position: fixed;
+        height: 600px;
+        bottom: -570px;
+        transition: all 300ms;
+    }
+
+    .ayuda_text{
+        bottom: 34px;
+    }
+
+    .visibleSidebar{
+        bottom: -1px;
     }
 
 }

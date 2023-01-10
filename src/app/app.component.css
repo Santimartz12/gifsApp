@@ -2,3 +2,14 @@
     padding-top: 100px;
     padding-left: 270px;
 }
+
+@media screen and (max-width:650px) {
+
+    .espacio_container{
+        position: absolute;
+        top: 180px;
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+}

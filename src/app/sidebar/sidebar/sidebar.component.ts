@@ -10,6 +10,8 @@ export class SidebarComponent {
 
   @Output() openDoc = new EventEmitter<boolean>();
 
+  isSidebarvisible = false;
+
   get busquedas(){
     return this.busqueda.mostrarBusquedas;
   }
@@ -18,11 +20,15 @@ export class SidebarComponent {
 
   buscar( query: string){
     this.busqueda.buscar(query);
+    this.isSidebarvisible = false;
   }
 
   mostrarDocumentacion(){
     this.openDoc.emit();
   }
 
+  visibleSidebar(){
+    this.isSidebarvisible = !this.isSidebarvisible;
+  }
 
 }
