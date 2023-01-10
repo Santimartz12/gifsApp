@@ -1,5 +1,6 @@
-<app-header></app-header>
-<app-sidebar></app-sidebar>
+<app-docs (close)="closeDoc()"  *ngIf="isDocVisible"  ></app-docs>
+<app-header (openDoc)="openDoc()"></app-header>
+<app-sidebar (openDoc)="openDoc()"></app-sidebar>
 
 <div class="espacio_container">
   <app-resultados></app-resultados>
@@ -11,3 +12,4 @@
 
   </div>
 </section>
+

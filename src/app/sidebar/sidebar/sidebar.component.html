@@ -5,4 +5,6 @@
     <ul class="busquedas__container">
         <li class="busqueda__item" *ngFor="let busqueda of busquedas" (click)="buscar( busqueda )">{{ busqueda | titlecase }}</li>
     </ul>
+
+    <p class="ayuda_text visible" (click)="mostrarDocumentacion()">Documentación</p>
 </aside>

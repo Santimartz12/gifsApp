@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  isDocVisible: boolean = false;
+
   title = 'GifsApp';
+
+  closeDoc(){
+    this.isDocVisible = false;
+  }
+
+  openDoc(){
+    this.isDocVisible = true;
+  }
 }

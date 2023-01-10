@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './header/header.module';
 import { ResultadosModule } from './resultados/resultados.module';
 import { SidebarModule } from './sidebar/sidebar.module';
+import { DocsComponent } from './docs/docs.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DocsComponent,
   ],
   imports: [
     BrowserModule,

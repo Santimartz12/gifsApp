@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BusquedaService } from 'src/app/servicios/busqueda.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { BusquedaService } from 'src/app/servicios/busqueda.service';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
+
+  @Output() openDoc = new EventEmitter<boolean>();
 
   get busquedas(){
     return this.busqueda.mostrarBusquedas;
@@ -17,5 +19,10 @@ export class SidebarComponent {
   buscar( query: string){
     this.busqueda.buscar(query);
   }
+
+  mostrarDocumentacion(){
+    this.openDoc.emit();
+  }
+
 
 }

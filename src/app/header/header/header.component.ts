@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { BusquedaService } from 'src/app/servicios/busqueda.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class HeaderComponent {
   documentacion: boolean = false;
 
   @ViewChild('inputBuscar') entradaInput!: ElementRef<HTMLInputElement>;
+  @Output() openDoc = new EventEmitter<boolean>();
 
   constructor(private busqueda: BusquedaService) { }
 
@@ -28,11 +29,7 @@ export class HeaderComponent {
   }
 
   mostrarDocumentacion(){
-    this.documentacion = true;
-  }
-
-  ocultarDocumentacion(){
-    this.documentacion = false;
+    this.openDoc.emit();
   }
 
 }
